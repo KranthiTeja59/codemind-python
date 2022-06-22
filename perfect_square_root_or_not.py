@@ -1,8 +1,8 @@
 import math
 n=int(input())
-a=math.floor(n**0.5)
-sq=int(a*a)
-if n-sq==0:
-    print('True')
+p=math.ceil(n**0.5)
+q=math.sqrt(n)
+if p==q:
+    print("True")
 else:
-    print('False')
+    print("False")
