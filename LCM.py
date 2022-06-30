@@ -1,8 +1,11 @@
-def lcm(a,b):
-    c=b
-    while True:
-        if c%a==0 and c%b==0:
-            return c
-        c+=1
-m,n=map(int,input().split())
-print(lcm(m,n))
+a,b=map(int,input().split())
+if a>b:
+    max=a
+else:
+    max=b
+while True:
+    if max%a==0 and max%b==0:
+        print(max)
+        break
+    max+=1
+    
