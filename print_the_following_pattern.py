@@ -1,6 +1,7 @@
-N=int(input())
-for i in range(N,0,-1):
-    for j in range(1,N+1):
-        if i==j or i>j:
-            print(chr(64+i),end=' ')
+n=int(input())
+for i in range(n):
+    for j in range(1,n-1):
+        print(j,end='')
+    for j in range(1,n-2):
+        print(j,end='')
     print()
