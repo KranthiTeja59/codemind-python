@@ -1,10 +1,17 @@
-def sel(n):
-    for d in str(n):
-        if d=='0' or n%int(d)>0:
-            return False
-    return True
-a=int(input())
-b=int(input())
-for n in range(a,b+1):
-    if sel(n):
-        print(n,end=' ')
+v=int(input())
+u=int(input())
+for x in range(v,u+1):
+    temp=x
+    t=0
+    while temp:
+        r=temp%10
+        temp//=10
+        if r==0:
+            t=1
+            break
+        elif x%r>0:
+            t=1
+            break
+    if t==0:
+        print(v,end=' ')
+    v+=1
