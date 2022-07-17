@@ -1,13 +1,15 @@
-def fibi(n):
-    a,b=0,1
-    if n==0 or n==1:
-        return True
-    while True:
-        c=a+b
-        if c>n:
-            return False
-        if c==n:
-            return True
-        a,b=b,c
 n=int(input())
-print(fibi(n))
+c=0
+a=1
+b=1
+if n==0 or n==1:
+    print(True)
+else:
+    while c<n:
+        c=a+b
+        b=a
+        a=c
+    if c==n:
+        print(True)
+    else:
+        print(False)
