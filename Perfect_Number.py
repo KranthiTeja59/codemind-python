@@ -1,12 +1,11 @@
-def per(N):
-    sum=0
-    for i in range(1,N):
-        if (N%i==0):
-            sum+=i
-    return sum
-N=int(input())
-if(N==per(N)):
-    print('True')
+n=int(input())
+i=1
+s=0
+while i<=n//2:
+    if n%i==0:
+        s+=i
+    i+=1
+if s==n:
+    print(True)
 else:
-    print('False')
-    
+    print(False)
