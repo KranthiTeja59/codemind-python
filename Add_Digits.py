@@ -1,9 +1,14 @@
 n=int(input())
-s=0
-while n:
-    s+=n%10
-    n//=10
-    if n==0 and s>9:
-        n=s
+while n!=0:
+    if n//10==0:
+        print(n)
+        break
+    else:
         s=0
-print(s)
+    while n:
+        r=n%10
+        n//=10
+        s+=r
+    n=s
+    
+        
