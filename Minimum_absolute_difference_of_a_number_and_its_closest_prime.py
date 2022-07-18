@@ -1,20 +1,26 @@
-def is_prime(m):
-    for i in range(2,int(m**0.5)+1):
-        if m%i==0:
-            return False
-    return True
-m=int(input())
-for j in range(m,m-10,-1):
+def is_prime(j):
+    i=2
+    v=0
+    while i!=j:
+        if j%i==0:
+            v=1
+        i+=1
+    if v==0:
+        return j
+y=int(input())
+b=y
+for j in range(y,2,-1):
     if is_prime(j):
-        a=m-j
-        np1=j
+        n=j
         break
-for j in range(m,m+10):
-    if is_prime(j):
-        b=j-m
-        np2=j
+while b!=0:
+    if is_prime(b):
+        m=b
         break
-if a<b:
-    print(a)
+    b+=1
+if (y-n)<(m-y):
+    print(abs(n-y))
+elif (y-n)==(m-y):
+    print(abs(n-y))
 else:
-    print(b)
+    print(abs(m-y))
